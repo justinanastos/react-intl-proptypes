@@ -6,8 +6,10 @@
     "build": "babel -d lib/ src/",
     "clean": "rimraf lib/",
     "lint": "eslint src/",
-    "prepublish": "npm run lint && npm run clean && npm run build",
-    "test": "mocha ./src/_tests_/*.js --require babel-core/register"
+    "postversion": "git push && git push --tags",
+    "preversion": "npm run clean",
+    "test": "mocha ./src/_tests_/*.js --require babel-core/register",
+    "version": "npm run build && git add -A lib"
   },
   "description": "PropType validators for ReactIntl components, i.e. `<FormattedMessage />`.",
   "devDependencies": {
