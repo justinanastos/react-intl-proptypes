@@ -1,6 +1,6 @@
 {
   "name": "react-intl-proptypes",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/ReactIntlPropTypes.js",
   "scripts": {
     "build": "babel -d lib/ src/",
