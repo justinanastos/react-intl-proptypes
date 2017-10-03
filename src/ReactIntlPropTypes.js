@@ -1,4 +1,4 @@
-import ReactElement from 'react/lib/ReactElement';
+import React from 'react';
 
 import {
   FormattedDate,
@@ -39,7 +39,7 @@ function getComponentName(componentClass) {
 function createReactIntlTypeChecker(expectedComponent) {
   function validate(props, propName, componentName, location) {
     const actualComponent = props[propName].type;
-    if (!ReactElement.isValidElement(props[propName]) || actualComponent !== expectedComponent) {
+    if (!React.isValidElement(props[propName]) || actualComponent !== expectedComponent) {
       const expectedComponentName = getComponentName(expectedComponent);
       const actualComponentName = getComponentName(actualComponent);
 
